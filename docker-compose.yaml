@@ -1,0 +1,14 @@
+services:
+  auth:
+    container_name: auth_service
+    environment:
+      CONFIG_PATH: /config/config.yaml
+      STORAGE_PATH: /storage/auth.db
+    build:
+      context: .
+      dockerfile: ./.dockerfile 
+    ports:
+      - "50051:50051"
+    # volumes:
+    #   - .:/app
+    # command: go run main.go

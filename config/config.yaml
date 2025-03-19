@@ -1,0 +1,12 @@
+env: "local"
+storage:
+  storage_path: "C:/auth-service/storage/auth.db" #sqlite
+  db_type: "sqlite"
+grpc_server:
+  address: "localhost"
+  port: 50051
+  timeout: 4s
+  iddle_timeout: 60s 
+token:
+  secret_key: "kjsdfjsdhkjhsdhuisdghsjkdghjskhgishdigoodgodsiguoiuorgrw"
+  expiration_time: 1h
