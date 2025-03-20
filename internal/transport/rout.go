@@ -24,3 +24,6 @@ func (r *Router) Run(addr string) error {
 	auth.RegisterAuthServer(r.server, r.service)
 	return r.server.Serve(listener)
 }
+func (r *Router) GracfulShutdown() {
+	r.server.GracefulStop()
+}
